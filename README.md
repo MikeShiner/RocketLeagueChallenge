@@ -4,7 +4,7 @@ Programming challenge for pulling Rocket League stats
 
 # Challenge
 
-Write a program which takes in a SteamID and produces the following Rocket League statitics for the player:
+Write a program which takes in a platform ID and produces the following Rocket League statitics for the player:
 
 - Platform & Username
 - Lifetime Wins & Lifetime Win Rank
@@ -19,13 +19,23 @@ Write a program which takes in a SteamID and produces the following Rocket Leagu
 
 ### Player Data
 
+#### Steam
+
 `https://api.tracker.gg/api/v2/rocket-league/standard/profile/steam/<steamID>`
+
+#### Xbox
+
+`https://api.tracker.gg/api/v2/rocket-league/standard/profile/xbl/<xblID>`
+
+#### PSN
+
+`https://api.tracker.gg/api/v2/rocket-league/standard/profile/psn/<psnID>`
 
 ### Tips:
 
 - Program can be written in any language
 - The above rest endpoint returns JSON data and will contain much of what you need, you'll need to loop through a lot of the structure to pull out the data you need
-- Use a HTTP Client pull data from this URL (make sure to replace `<steamId>`)
+- Use a HTTP Client pull data from this URL (make sure to replace `<platformId>`)
 - The current season is 16, but don't hardcode this
 
 ### How to complete
